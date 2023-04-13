@@ -1,6 +1,5 @@
 import { useDebounce, useDebouncedCallback } from "use-debounce";
 import { memo, useState, useRef, useEffect, useLayoutEffect } from "react";
-
 import SendWhiteIcon from "../icons/send-white.svg";
 import BrainIcon from "../icons/brain.svg";
 import ExportIcon from "../icons/share.svg";
@@ -13,11 +12,12 @@ import AddIcon from "../icons/add.svg";
 import DeleteIcon from "../icons/delete.svg";
 import MaxIcon from "../icons/max.svg";
 import MinIcon from "../icons/min.svg";
-
 import LightIcon from "../icons/light.svg";
 import DarkIcon from "../icons/dark.svg";
 import AutoIcon from "../icons/auto.svg";
 import BottomIcon from "../icons/bottom.svg";
+import Image from "next/image";
+import myImage from "../imgs/weixin.jpg";
 
 import {
   Message,
@@ -146,8 +146,33 @@ function PromptToast(props: {
     });
   };
 
+  const url = myImage.src;
+
   return (
-    <div className={chatStyle["prompt-toast"]} key="prompt-toast">
+    <div
+      className={chatStyle["prompt-toast"]}
+      key="prompt-toast"
+      style={{ position: "relative" }}
+    >
+      <div
+        style={{
+          marginTop: "20px",
+          marginBottom: "20px",
+          position: "absolute",
+          top: "50%",
+          left: "10%",
+        }}
+      >
+        <div>
+          欢迎使用本站的chatgpt,一元,两元买不了房买不了车，但是你可以持久的使用chatgpt,哈哈哈。
+        </div>
+        <img
+          src={url}
+          alt="My Image"
+          style={{ height: "200px", width: "200px" }}
+        />
+      </div>
+      <br></br>
       {props.showToast && (
         <div
           className={chatStyle["prompt-toast-inner"] + " clickable"}

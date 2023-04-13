@@ -15,7 +15,7 @@ FROM base AS builder
 
 RUN apk update && apk add --no-cache git
 
-ENV OPENAI_API_KEY="1"
+ENV OPENAI_API_KEY="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"
 ENV CODE=""
 
 WORKDIR /app
@@ -30,7 +30,7 @@ WORKDIR /app
 RUN apk add proxychains-ng
 
 ENV PROXY_URL=""
-ENV OPENAI_API_KEY=""
+ENV OPENAI_API_KEY="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"
 ENV CODE=""
 
 COPY --from=builder /app/public ./public
