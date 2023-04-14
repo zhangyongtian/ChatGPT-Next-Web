@@ -25,6 +25,8 @@ import dynamic from "next/dynamic";
 import { REPO_URL } from "../constant";
 import { ErrorBoundary } from "./error";
 
+import Image from "next/image";
+import myImage from "../imgs/weixin.jpg";
 export function Loading(props: { noLogo?: boolean }) {
   return (
     <div className={styles["loading-content"]}>
@@ -155,6 +157,8 @@ function _Home() {
     return <Loading />;
   }
 
+  const url = myImage.src;
+
   return (
     <div
       className={`${
@@ -167,12 +171,25 @@ function _Home() {
         className={styles.sidebar + ` ${showSideBar && styles["sidebar-show"]}`}
       >
         <div className={styles["sidebar-header"]}>
-          <div className={styles["sidebar-title"]}>ChatGPT Next</div>
-          <div className={styles["sidebar-sub-title"]}>
-            Build your own AI assistant.
-          </div>
-          <div className={styles["sidebar-logo"]}>
-            <ChatGptIcon />
+          <div className={styles["sidebar-title"]}>免费 ChatGPT</div>
+          <div>
+            <div>
+              欢迎使用本站的
+              ChatGPT,一元,两元,买不了车,买不了房,但是你可以持久的使用ChatGPT,哈哈哈。
+            </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                src={url}
+                alt="My Image"
+                style={{ height: "200px", width: "200px" }}
+              />
+            </div>
           </div>
         </div>
 

@@ -16,8 +16,6 @@ import LightIcon from "../icons/light.svg";
 import DarkIcon from "../icons/dark.svg";
 import AutoIcon from "../icons/auto.svg";
 import BottomIcon from "../icons/bottom.svg";
-import Image from "next/image";
-import myImage from "../imgs/weixin.jpg";
 
 import {
   Message,
@@ -146,8 +144,6 @@ function PromptToast(props: {
     });
   };
 
-  const url = myImage.src;
-
   return (
     <div
       className={chatStyle["prompt-toast"]}
@@ -162,16 +158,7 @@ function PromptToast(props: {
           top: "50%",
           left: "10%",
         }}
-      >
-        <div>
-          欢迎使用本站的chatgpt,一元,两元买不了房买不了车，但是你可以持久的使用chatgpt,哈哈哈。
-        </div>
-        <img
-          src={url}
-          alt="My Image"
-          style={{ height: "200px", width: "200px" }}
-        />
-      </div>
+      ></div>
       <br></br>
       {props.showToast && (
         <div
