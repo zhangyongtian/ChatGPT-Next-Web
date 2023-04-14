@@ -175,7 +175,8 @@ function _Home() {
           <div>
             <div>
               欢迎使用本站的
-              ChatGPT,一元,两元,买不了车,买不了房,但是你可以持久的使用ChatGPT,哈哈哈。
+              ChatGPT,一元,两元,买不了车,买不了房,但是你可以持久的使用ChatGPT,哈哈哈(近期加入
+              ChatGPT4.0免费使用)。
             </div>
             <div
               style={{
